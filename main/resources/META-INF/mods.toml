@@ -1,26 +1,24 @@
 modLoader="javafml" #mandatory
-loaderVersion="[25,)" #mandatory (25 is current forge version)
-credits="Harry" #optional
+loaderVersion="[24,)" #mandatory (24 is current forge version)
+credits="Thanks to Harry Talks for his amazing tutorials." #optional
 authors="Harry" #optional
 
 [[mods]] #mandatory
-modId="harry" #mandatory
-version="${file.jarVersion}" #mandatory
-displayName="Tutorial Mod" #mandatory
-# The description text for the mod (multi line!) (#mandatory)
+modId="tutorialmod" #mandatory
+version="0.1" #mandatory
+displayName="Harry's Tutorial Mod" #mandatory
 description='''
-This is a multi-line description. 
-This mod is awesome!
+This is my mod.
+It's great.
+Sub 2 pewdiepie
 '''
 
-# A dependency - use the . to indicate dependency for a specific modid. Dependencies are optional.
 [[dependencies.tutorialmod]] #optional
     modId="forge" #mandatory
     mandatory=true #mandatory
     versionRange="[25,)" #mandatory
     ordering="NONE"
     side="BOTH"
-	
 # Here's another dependency
 [[dependencies.tutorialmod]]
     modId="minecraft"
