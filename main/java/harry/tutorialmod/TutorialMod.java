@@ -55,62 +55,28 @@ public class TutorialMod
 		{
 			event.getRegistry().registerAll
 			(
-				ItemList.tutorial_item = new Item(new Item.Properties().group(tutorial)).setRegistryName(location("tutorial_item"))
+				ItemList.tutorial_item = new Item(new Item.Properties().group(tutorial)).setRegistryName(location("tutorial_item")),
+				
+				ItemList.tutorial_block = new ItemBlock(BlockList.tutorial_block, new Item.Properties().group(tutorial)).setRegistryName(BlockList.tutorial_block.getRegistryName())
 			);
 			
 			logger.info("Items registered.");
+		}
+		
+		@SubscribeEvent
+		public static void registerBlocks(final RegistryEvent.Register<Block> event)
+		{
+			event.getRegistry().registerAll
+			(
+				BlockList.tutorial_block = new Block(Block.Properties.create(Material.IRON).hardnessAndResistance(2.0f, 3.0f).lightValue(5).sound(SoundType.METAL)).setRegistryName(location("tutorial_block"))
+			);
+			
+			logger.info("Blocks registered.");
 		}
 		
 		private static ResourceLocation location(String name)
 		{
 			return new ResourceLocation(modid, name);
 		}
-	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+	}	
 }
