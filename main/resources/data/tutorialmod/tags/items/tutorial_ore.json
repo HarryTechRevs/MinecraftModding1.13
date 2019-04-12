@@ -1,0 +1,9 @@
+{
+	"replace": false,
+	"values":
+	[
+		"tutorialmod:tutorial_ore",
+		"tutorialmod:tutorial_ore_nether",
+		"tutorialmod:tutorial_ore_end"
+	]	
+}

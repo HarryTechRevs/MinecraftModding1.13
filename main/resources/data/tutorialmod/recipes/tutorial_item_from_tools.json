@@ -1,0 +1,11 @@
+{
+	"type": "minecraft:crafting_shapeless",
+	"ingredients": 
+	[
+		{ "item": "tutorialmod:tutorial_sword" },
+		{ "item": "tutorialmod:tutorial_axe" },
+		{ "item": "tutorialmod:tutorial_shovel" }
+	],
+	
+	"result": { "item": "tutorialmod:tutorial_block" }
+}

@@ -7,7 +7,15 @@
 	"item.tutorialmod.tutorial_shovel": "Tutorial Shovel",
 	"item.tutorialmod.tutorial_sword": "Tutorial Sword",
 	
+	"item.tutorialmod.tutorial_helmet": "Tutorial Helmet",
+	"item.tutorialmod.tutorial_chestplate": "Tutorial Chestplate",
+	"item.tutorialmod.tutorial_leggings": "Tutorial Leggings",
+	"item.tutorialmod.tutorial_boots": "Tutorial Boots",
+	
 	"block.tutorialmod.tutorial_block": "Tutorial Block",
+	"block.tutorialmod.tutorial_ore": "Tutorial Ore",
+	"block.tutorialmod.tutorial_ore_nether": "Tutorial Nether Ore",
+	"block.tutorialmod.tutorial_ore_end": "Tutorial End Ore",
 	
 	"itemGroup.tutorial": "Tutorial Item Group"
 }

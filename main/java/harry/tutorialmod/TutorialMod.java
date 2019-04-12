@@ -9,6 +9,7 @@ import harry.tutorialmod.lists.ArmourMaterialList;
 import harry.tutorialmod.lists.BlockList;
 import harry.tutorialmod.lists.ItemList;
 import harry.tutorialmod.lists.ToolMaterialList;
+import harry.tutorialmod.world.OreGeneration;
 import net.minecraft.block.Block;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
@@ -50,6 +51,7 @@ public class TutorialMod
 	
 	private void setup(final FMLCommonSetupEvent event)
 	{
+		OreGeneration.setupOreGeneration();
 		logger.info("Setup method registered.");
 	}
 	
@@ -72,9 +74,18 @@ public class TutorialMod
 				ItemList.tutorial_hoe = new ItemHoe(ToolMaterialList.tutorial, 6.0f, new Item.Properties().group(tutorial)).setRegistryName(location("tutorial_hoe")),
 				ItemList.tutorial_pickaxe = new ItemCustomPickaxe(ToolMaterialList.tutorial, -2, 6.0f, new Item.Properties().group(tutorial)).setRegistryName(location("tutorial_pickaxe")),
 				ItemList.tutorial_shovel = new ItemSpade(ToolMaterialList.tutorial, -3.0f, 6.0f, new Item.Properties().group(tutorial)).setRegistryName(location("tutorial_shovel")),
-				ItemList.tutorial_sword = new ItemSword(ToolMaterialList.tutorial, 0, 6.0f, new Item.Properties().group(tutorial)).setRegistryName(location("tutorial_sword")),				
-						
-				ItemList.tutorial_block = new ItemBlock(BlockList.tutorial_block, new Item.Properties().group(tutorial)).setRegistryName(BlockList.tutorial_block.getRegistryName())
+				ItemList.tutorial_sword = new ItemSword(ToolMaterialList.tutorial, 0, 6.0f, new Item.Properties().group(tutorial)).setRegistryName(location("tutorial_sword")),
+				
+				ItemList.tutorial_helmet = new ItemArmor(ArmourMaterialList.tutorial, EntityEquipmentSlot.HEAD, new Item.Properties().group(tutorial)).setRegistryName(location("tutorial_helmet")),
+				ItemList.tutorial_chestplate = new ItemArmor(ArmourMaterialList.tutorial, EntityEquipmentSlot.CHEST, new Item.Properties().group(tutorial)).setRegistryName(location("tutorial_chestplate")),
+				ItemList.tutorial_leggings = new ItemArmor(ArmourMaterialList.tutorial, EntityEquipmentSlot.LEGS, new Item.Properties().group(tutorial)).setRegistryName(location("tutorial_leggings")),
+				ItemList.tutorial_boots = new ItemArmor(ArmourMaterialList.tutorial, EntityEquipmentSlot.FEET, new Item.Properties().group(tutorial)).setRegistryName(location("tutorial_boots")),
+				
+				ItemList.tutorial_block = new ItemBlock(BlockList.tutorial_block, new Item.Properties().group(tutorial)).setRegistryName(BlockList.tutorial_block.getRegistryName()),
+				ItemList.tutorial_ore = new ItemBlock(BlockList.tutorial_ore, new Item.Properties().group(tutorial)).setRegistryName(BlockList.tutorial_ore.getRegistryName()),
+				ItemList.tutorial_ore_nether = new ItemBlock(BlockList.tutorial_ore_nether, new Item.Properties().group(tutorial)).setRegistryName(BlockList.tutorial_ore_nether.getRegistryName()),
+				ItemList.tutorial_ore_end = new ItemBlock(BlockList.tutorial_ore_end, new Item.Properties().group(tutorial)).setRegistryName(BlockList.tutorial_ore_end.getRegistryName())
+
 			);
 			
 			logger.info("Items registered.");
@@ -85,7 +96,10 @@ public class TutorialMod
 		{
 			event.getRegistry().registerAll
 			(
-				BlockList.tutorial_block = new Block(Block.Properties.create(Material.IRON).hardnessAndResistance(2.0f, 3.0f).lightValue(5).sound(SoundType.METAL)).setRegistryName(location("tutorial_block"))
+				BlockList.tutorial_block = new Block(Block.Properties.create(Material.IRON).hardnessAndResistance(2.0f, 3.0f).lightValue(5).sound(SoundType.METAL)).setRegistryName(location("tutorial_block")),
+				BlockList.tutorial_ore = new Block(Block.Properties.create(Material.ROCK).hardnessAndResistance(2.0f, 3.0f).lightValue(5).sound(SoundType.METAL)).setRegistryName(location("tutorial_ore")),
+				BlockList.tutorial_ore_nether = new Block(Block.Properties.create(Material.ROCK).hardnessAndResistance(2.0f, 3.0f).lightValue(5).sound(SoundType.METAL)).setRegistryName(location("tutorial_ore_nether")),
+				BlockList.tutorial_ore_end = new Block(Block.Properties.create(Material.ROCK).hardnessAndResistance(2.0f, 3.0f).lightValue(5).sound(SoundType.METAL)).setRegistryName(location("tutorial_ore_end"))
 			);
 			
 			logger.info("Blocks registered.");
