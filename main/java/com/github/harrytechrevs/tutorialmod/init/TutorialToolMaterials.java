@@ -1,18 +1,18 @@
-package harry.tutorialmod.lists;
+package com.github.harrytechrevs.tutorialmod.init;
 
 import net.minecraft.item.IItemTier;
 import net.minecraft.item.Item;
 import net.minecraft.item.crafting.Ingredient;
 
-public enum ToolMaterialList implements IItemTier
+public enum TutorialToolMaterials implements IItemTier
 {
-	tutorial(10.0f, 9.0f, 800, 3, 25, ItemList.tutorial_item);
+	tutorial(10.0f, 9.0f, 800, 3, 25, TutorialItems.tutorial_item);
 	
 	private float attackDamage, efficiency;
 	private int durability, harvestLevel, enchantability;
 	private Item repairMaterial;
 	
-	private ToolMaterialList(float attackDamage, float efficiency, int durability, int harvestLevel, int enchantability, Item repairMaterial) 
+	private TutorialToolMaterials(float attackDamage, float efficiency, int durability, int harvestLevel, int enchantability, Item repairMaterial) 
 	{
 		this.attackDamage = attackDamage;
 		this.efficiency = efficiency;

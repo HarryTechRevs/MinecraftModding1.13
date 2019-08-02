@@ -1,16 +1,17 @@
-package harry.tutorialmod.lists;
+package com.github.harrytechrevs.tutorialmod.init;
 
-import harry.tutorialmod.TutorialMod;
-import net.minecraft.inventory.EntityEquipmentSlot;
+import com.github.harrytechrevs.tutorialmod.TutorialMod;
+
+import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.IArmorMaterial;
 import net.minecraft.item.Item;
 import net.minecraft.item.crafting.Ingredient;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.SoundEvent;
 
-public enum ArmourMaterialList implements IArmorMaterial
+public enum TutorialArmorMaterials implements IArmorMaterial
 {
-	tutorial("tutorial", 400, new int[] {8, 10, 9, 7}, 25, ItemList.tutorial_item, "entity.ender_dragon.growl", 0.0f);
+	tutorial("tutorial", 400, new int[] {8, 10, 9, 7}, 25, TutorialItems.tutorial_item, "entity.ender_dragon.growl", 0.0f);
 	
 	private static final int[] max_damage_array = new int[]{13, 15, 16, 11};
 	private String name, equipSound;
@@ -19,7 +20,7 @@ public enum ArmourMaterialList implements IArmorMaterial
 	private int[] damageReductionAmounts;
 	private float toughness;
 	
-	private ArmourMaterialList(String name, int durability, int[] damageReductionAmounts, int enchantability, Item repairItem, String equipSound, float toughness) 
+	private TutorialArmorMaterials(String name, int durability, int[] damageReductionAmounts, int enchantability, Item repairItem, String equipSound, float toughness) 
 	{
 		this.name = name;
 		this.equipSound = equipSound;
@@ -31,13 +32,13 @@ public enum ArmourMaterialList implements IArmorMaterial
 	}
 
 	@Override
-	public int getDamageReductionAmount(EntityEquipmentSlot slot) 
+	public int getDamageReductionAmount(EquipmentSlotType slot) 
 	{
 		return this.damageReductionAmounts[slot.getIndex()];
 	}
 
 	@Override
-	public int getDurability(EntityEquipmentSlot slot) 
+	public int getDurability(EquipmentSlotType slot) 
 	{
 		return max_damage_array[slot.getIndex()] * this.durability;
 	}
@@ -51,7 +52,7 @@ public enum ArmourMaterialList implements IArmorMaterial
 	@Override
 	public String getName() 
 	{
-		return TutorialMod.modid + ":" + this.name;
+		return TutorialMod.MODID + ":" + this.name;
 	}
 
 	@Override

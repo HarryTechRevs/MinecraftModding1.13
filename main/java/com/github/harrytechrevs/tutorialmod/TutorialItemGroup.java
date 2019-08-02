@@ -1,6 +1,7 @@
-package harry.tutorialmod;
+package com.github.harrytechrevs.tutorialmod;
 
-import harry.tutorialmod.lists.ItemList;
+import com.github.harrytechrevs.tutorialmod.init.TutorialItems;
+
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 
@@ -14,6 +15,6 @@ public class TutorialItemGroup extends ItemGroup
 	@Override
 	public ItemStack createIcon() 
 	{
-		return new ItemStack(ItemList.tutorial_item);
+		return new ItemStack(TutorialItems.tutorial_item);
 	}
 }

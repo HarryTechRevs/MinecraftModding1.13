@@ -1,0 +1,79 @@
+{
+	"type": "minecraft:entity",
+	"pools":
+	[
+		{
+			"rolls":
+			{
+				"min": 1,
+				"max": 4
+			},
+			"bonus_rolls": 2,
+			"entries":
+			[
+				{
+					"type": "minecraft:tag",				
+					"functions":
+					[
+						{
+							"function": "minecraft:set_count",
+							"count":
+							{
+								"min": 1,
+								"max": 5
+							}
+						}
+					],
+					"name": "tutorialmod:tutorial_ore",
+					"expand": true,
+					"weight": 100
+				},
+				
+				{
+					"type": "minecraft:item",
+					"functions":
+					[
+						{
+							"function": "minecraft:set_damage",
+							"damage": 0.01
+						},
+						
+						{
+							"function": "minecraft:set_nbt",
+							"tag": "{Enchantments:[{id:sharpness,lvl:1000}]}"
+						},
+						
+						{
+							"function": "minecraft:set_name",
+							"name": "The Sword Of Justice"
+						},
+						
+						{
+							"function": "minecraft:set_lore",
+							"lore":
+							[
+								{
+									"text": "This sword brings justice",
+									"color": "blue"
+								},
+								
+								{
+									"text": "to the strongest of",
+									"color": "green"
+								},
+								
+								{
+									"text": "foes",
+									"color": "red"
+								}
+							]
+						}
+					],
+					
+					"name": "tutorialmod:tutorial_sword",
+					"weight": 2
+				}
+			]
+		}
+	]
+}

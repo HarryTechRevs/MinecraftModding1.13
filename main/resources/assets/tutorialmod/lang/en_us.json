@@ -12,10 +12,14 @@
 	"item.tutorialmod.tutorial_leggings": "Tutorial Leggings",
 	"item.tutorialmod.tutorial_boots": "Tutorial Boots",
 	
+	"item.tutorialmod.tutorial_entity_egg": "Tutorial Entity Egg",
+	
 	"block.tutorialmod.tutorial_block": "Tutorial Block",
 	"block.tutorialmod.tutorial_ore": "Tutorial Ore",
 	"block.tutorialmod.tutorial_ore_nether": "Tutorial Nether Ore",
 	"block.tutorialmod.tutorial_ore_end": "Tutorial End Ore",
+	
+	"entity.tutorialmod.tutorial_entity": "Tutorial Entity",
 	
 	"itemGroup.tutorial": "Tutorial Item Group"
 }
